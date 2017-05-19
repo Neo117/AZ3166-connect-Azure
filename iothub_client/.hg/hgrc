@@ -1,0 +1,4 @@
+[ui]
+ignore.local = .hg/hgignore
+[paths]
+default = http://mbed.org/users/AzureIoTClient/code/iothub_client/

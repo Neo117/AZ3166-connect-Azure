@@ -1,0 +1,7 @@
+data/mqtt_message.c.i
+data/azure_umqtt_c/mqtt_client.h.i
+data/azure_umqtt_c/mqtt_message.h.i
+data/mqtt_client.c.i
+data/azure_umqtt_c/mqtt_codec.h.i
+data/mqtt_codec.c.i
+data/azure_umqtt_c/mqttconst.h.i

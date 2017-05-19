@@ -1,0 +1,4 @@
+data/iothubtransportmqtt.c.i
+data/iothubtransport_mqtt_common.h.i
+data/iothubtransport_mqtt_common.c.i
+data/iothubtransportmqtt.h.i
