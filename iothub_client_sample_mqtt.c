@@ -15,7 +15,7 @@
 /*String containing Hostname, Device Id & Device Key in the format:                         */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>"                */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessSignature=<device_sas_token>"    */
-static const char* connectionString = "HostName=AZ3166test01.azure-devices.cn;DeviceId=AZ3166TEST;SharedAccessKey=SQQOxf2rFCmVwlyXJh0ZEqxLb/1idodQNnY+ZKLl2Vs=";
+static const char* connectionString = "****";
 
 
 static int callbackCounter;
