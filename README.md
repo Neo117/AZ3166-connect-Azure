@@ -14,7 +14,7 @@ Getting Started Guide
 
 # Introduction
 
-AZ3166 is an IoT development kit based on EMW3166 developed by Shanghai MXCHIP Information Technology Co., Ltd. and Microsoft asia-pacific technology Co., Ltd. The development kit provides a smart hardware solution. It is compatible with Arduino with abundant peripherals and sensors. AZ3166 could be used for the development of IoT and smart hardware prototype, making it continent to verify the software and function of users. Product could connect to Azure and mobile phone fast and safely. With AZ3166, customers could cut down the period of research. AZ3166 has software and hardware and would be supported with developer community, including development kit and demo for quick connection to cloud service. Control and operation could be obtained by mobile phone or tablet.
+AZ3166 hfhfhis an IoT development kit based on EMW3166 developed by Shanghai MXCHIP Information Technology Co., Ltd. and Microsoft asia-pacific technology Co., Ltd. The development kit provides a smart hardware solution. It is compatible with Arduino with abundant peripherals and sensors. AZ3166 could be used for the development of IoT and smart hardware prototype, making it continent to verify the software and function of users. Product could connect to Azure and mobile phone fast and safely. With AZ3166, customers could cut down the period of research. AZ3166 has software and hardware and would be supported with developer community, including development kit and demo for quick connection to cloud service. Control and operation could be obtained by mobile phone or tablet.
 
 In this guide you could konw how to connecting AZ3166 to Azure, sending and receiving data through Azure. 
 
