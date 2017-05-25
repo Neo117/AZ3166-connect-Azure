@@ -14,7 +14,7 @@ Getting Started Guide
 
 # Introduction
 
-AZ3166 hfhfhis an IoT development kit based on EMW3166 developed by Shanghai MXCHIP Information Technology Co., Ltd. and Microsoft asia-pacific technology Co., Ltd. The development kit provides a smart hardware solution. It is compatible with Arduino with abundant peripherals and sensors. AZ3166 could be used for the development of IoT and smart hardware prototype, making it continent to verify the software and function of users. Product could connect to Azure and mobile phone fast and safely. With AZ3166, customers could cut down the period of research. AZ3166 has software and hardware and would be supported with developer community, including development kit and demo for quick connection to cloud service. Control and operation could be obtained by mobile phone or tablet.
+AZ3166 is an IoT development kit based on EMW3166 developed by Shanghai MXCHIP Information Technology Co., Ltd. and Microsoft asia-pacific technology Co., Ltd. The development kit provides a smart hardware solution. It is compatible with Arduino with abundant peripherals and sensors. AZ3166 could be used for the development of IoT and smart hardware prototype, making it continent to verify the software and function of users. Product could connect to Azure and mobile phone fast and safely. With AZ3166, customers could cut down the period of research. AZ3166 has software and hardware and would be supported with developer community, including development kit and demo for quick connection to cloud service. Control and operation could be obtained by mobile phone or tablet.
 
 In this guide you could konw how to connecting AZ3166 to Azure, sending and receiving data through Azure. 
 
@@ -27,7 +27,15 @@ In this guide you could konw how to connecting AZ3166 to Azure, sending and rece
  - AZ3166 board
  - Micro USB cable
 
+Main control unit of AZ3166 is EMW3166---a low power consumption Wi-Fi module developed by MXCHIP, with DAP Link emulator and 128x64 OLED and other resources such as LED light. Sensors are integrated on the board including Motion sensor, Magnetometer sensor, Atmospheric pressure sensor, Temperature and humidity sensor. The development kit also has audio processing unit to connect to Azure for vioce recognition and voice play. 
+
+![sensor](image/sensor.png)
+
 # Step 2: Prepare SDK
+
+**Download SDK**
+
+SDK could be download from [here](https://github.com/Neo117/AZ3166-connect-Azure).
 
 **Compiling Environment**
 
@@ -46,13 +54,7 @@ mbed config -G GCC_ARM_PATH ****
 
 **A. Configure WiFi**
 
-Configure WiFi in main.cpp, input Wifi SSID and password in main.app as shown below.
-
-<pre>
-int ret = wlan.connect( "****", "****", NSAPI_SECURITY_WPA_WPA2, 0 );
-</pre>
-
-As well as in mbed_app.json.
+Configure WiFi in mbed_app.json. Input Wifi SSID and password in main.app as shown below.
 
 <pre>
         "wifi-ssid": {
@@ -83,7 +85,7 @@ Use the following command(Command Prompt on Windows, or Terminal on Mac OS X)
      mbed compile -m AZ3166 -t GCC_ARM
 </pre>
 
-After compile the sample. a `.bin` file would be generated in the path: `...\mbed-wifi-example\BUILD\AZ3166\GCC_ARM`.
+After compile the sample. a `.bin` file with the same name of the SDK would be generated in the path: `...\mbed-wifi-example\BUILD\AZ3166\GCC_ARM`.
 
 **D. Download Firmware to DevKit**
 

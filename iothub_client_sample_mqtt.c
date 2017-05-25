@@ -15,16 +15,21 @@
 /*String containing Hostname, Device Id & Device Key in the format:                         */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessKey=<device_key>"                */
 /*  "HostName=<host_name>;DeviceId=<device_id>;SharedAccessSignature=<device_sas_token>"    */
-static const char* connectionString = "****";
+static const char* connectionString = "HostName=AZ3166test01.azure-devices.cn;DeviceId=AZ3166TEST;SharedAccessKey=SQQOxf2rFCmVwlyXJh0ZEqxLb/1idodQNnY+ZKLl2Vs=";
 
 
 static int callbackCounter;
 static char msgText[1024];
 static char propText[1024];
 static bool g_continueRunning;
-#define MESSAGE_COUNT 5
+#define MESSAGE_COUNT 3
 #define DOWORK_LOOP_NUM     3
 
+extern float hts221_humidity;
+extern float hts221_temp;
+extern int32_t p_data[3];
+extern int32_t x_axes[3];
+extern int32_t g_axes[3];
 
 typedef struct EVENT_INSTANCE_TAG
 {
@@ -154,7 +159,8 @@ void iothub_client_sample_mqtt_run(void)
                 {
                     if (iterator < MESSAGE_COUNT)
                     {
-                        sprintf_s(msgText, sizeof(msgText), "{\"deviceId\":\"myFirstDevice\",\"windSpeed\":%.2f}", avgWindSpeed + (rand() % 4 + 2));
+                        // sprintf_s(msgText, sizeof(msgText), "{\"deviceId\":\"myFirstDevice\",\"windSpeed\":%.2f}", avgWindSpeed + (rand() % 4 + 2));
+                        sprintf_s(msgText, sizeof(msgText), "{\"deviceId\":\"myFirstDevice\",\"Humidity\":%.2f,\"Temp\":%.2f,\"magnet\":%d,%d,%d,\"acceleration\":%d,%d,%d,\"gra\":%d,%d,%d}",hts221_humidity,hts221_temp,p_data[0], p_data[1], p_data[2],x_axes[0],x_axes[1],x_axes[2],g_axes[0],g_axes[1],g_axes[2]);
                         if ((messages[iterator].messageHandle = IoTHubMessage_CreateFromByteArray((const unsigned char*)msgText, strlen(msgText))) == NULL)
                         {
                             (void)printf("ERROR: iotHubMessageHandle is NULL!\r\n");
